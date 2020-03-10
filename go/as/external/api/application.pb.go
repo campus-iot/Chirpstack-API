@@ -33,6 +33,7 @@ const (
 	IntegrationKind_INFLUXDB    IntegrationKind = 1
 	IntegrationKind_THINGSBOARD IntegrationKind = 2
 	IntegrationKind_MYDEVICES   IntegrationKind = 3
+	IntegrationKind_KAFKA       IntegrationKind = 4
 )
 
 var IntegrationKind_name = map[int32]string{
@@ -40,6 +41,7 @@ var IntegrationKind_name = map[int32]string{
 	1: "INFLUXDB",
 	2: "THINGSBOARD",
 	3: "MYDEVICES",
+	4: "KAFKA"
 }
 
 var IntegrationKind_value = map[string]int32{
@@ -47,6 +49,7 @@ var IntegrationKind_value = map[string]int32{
 	"INFLUXDB":    1,
 	"THINGSBOARD": 2,
 	"MYDEVICES":   3,
+	"KAFKA":       4,
 }
 
 func (x IntegrationKind) String() string {
