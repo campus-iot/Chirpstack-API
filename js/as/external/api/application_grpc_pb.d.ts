@@ -29,6 +29,10 @@ interface IApplicationServiceService extends grpc.ServiceDefinition<grpc.Untyped
   getMyDevicesIntegration: grpc.MethodDefinition<as_external_api_application_pb.GetMyDevicesIntegrationRequest, as_external_api_application_pb.GetMyDevicesIntegrationResponse>;
   updateMyDevicesIntegration: grpc.MethodDefinition<as_external_api_application_pb.UpdateMyDevicesIntegrationRequest, google_protobuf_empty_pb.Empty>;
   deleteMyDevicesIntegration: grpc.MethodDefinition<as_external_api_application_pb.DeleteMyDevicesIntegrationRequest, google_protobuf_empty_pb.Empty>;
+  createKafkaIntegration: grpc.MethodDefinition<as_external_api_application_pb.CreateKafkaIntegrationRequest, google_protobuf_empty_pb.Empty>;
+  getKafkaIntegration: grpc.MethodDefinition<as_external_api_application_pb.GetKafkaIntegrationRequest, as_external_api_application_pb.GetKafkaIntegrationResponse>;
+  updateKafkaIntegration: grpc.MethodDefinition<as_external_api_application_pb.UpdateKafkaIntegrationRequest, google_protobuf_empty_pb.Empty>;
+  deleteKafkaIntegration: grpc.MethodDefinition<as_external_api_application_pb.DeleteKafkaIntegrationRequest, google_protobuf_empty_pb.Empty>;
   listIntegrations: grpc.MethodDefinition<as_external_api_application_pb.ListIntegrationRequest, as_external_api_application_pb.ListIntegrationResponse>;
 }
 
@@ -99,6 +103,18 @@ export class ApplicationServiceClient extends grpc.Client {
   deleteMyDevicesIntegration(argument: as_external_api_application_pb.DeleteMyDevicesIntegrationRequest, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
   deleteMyDevicesIntegration(argument: as_external_api_application_pb.DeleteMyDevicesIntegrationRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
   deleteMyDevicesIntegration(argument: as_external_api_application_pb.DeleteMyDevicesIntegrationRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
+  createKafkaIntegration(argument: as_external_api_application_pb.CreateKafkaIntegrationRequest, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
+  createKafkaIntegration(argument: as_external_api_application_pb.CreateKafkaIntegrationRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
+  createKafkaIntegration(argument: as_external_api_application_pb.CreateKafkaIntegrationRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
+  getKafkaIntegration(argument: as_external_api_application_pb.GetKafkaIntegrationRequest, callback: grpc.requestCallback<as_external_api_application_pb.GetKafkaIntegrationResponse>): grpc.ClientUnaryCall;
+  getKafkaIntegration(argument: as_external_api_application_pb.GetKafkaIntegrationRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<as_external_api_application_pb.GetKafkaIntegrationResponse>): grpc.ClientUnaryCall;
+  getKafkaIntegration(argument: as_external_api_application_pb.GetKafkaIntegrationRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<as_external_api_application_pb.GetKafkaIntegrationResponse>): grpc.ClientUnaryCall;
+  updateKafkaIntegration(argument: as_external_api_application_pb.UpdateKafkaIntegrationRequest, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
+  updateKafkaIntegration(argument: as_external_api_application_pb.UpdateKafkaIntegrationRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
+  updateKafkaIntegration(argument: as_external_api_application_pb.UpdateKafkaIntegrationRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
+  deleteKafkaIntegration(argument: as_external_api_application_pb.DeleteKafkaIntegrationRequest, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
+  deleteKafkaIntegration(argument: as_external_api_application_pb.DeleteKafkaIntegrationRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
+  deleteKafkaIntegration(argument: as_external_api_application_pb.DeleteKafkaIntegrationRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<google_protobuf_empty_pb.Empty>): grpc.ClientUnaryCall;
   listIntegrations(argument: as_external_api_application_pb.ListIntegrationRequest, callback: grpc.requestCallback<as_external_api_application_pb.ListIntegrationResponse>): grpc.ClientUnaryCall;
   listIntegrations(argument: as_external_api_application_pb.ListIntegrationRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<as_external_api_application_pb.ListIntegrationResponse>): grpc.ClientUnaryCall;
   listIntegrations(argument: as_external_api_application_pb.ListIntegrationRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<as_external_api_application_pb.ListIntegrationResponse>): grpc.ClientUnaryCall;
