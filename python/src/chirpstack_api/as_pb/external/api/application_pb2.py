@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='api',
   syntax='proto3',
   serialized_options=b'Z7github.com/brocaar/chirpstack-api/go/v3/as/external/api',
-  serialized_pb=b'\n3chirpstack-api/as_pb/external/api/application.proto\x12\x03\x61pi\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xea\x01\n\x0b\x41pplication\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\'\n\x0forganization_id\x18\x04 \x01(\x03R\x0eorganizationID\x12,\n\x12service_profile_id\x18\x05 \x01(\tR\x10serviceProfileID\x12\x15\n\rpayload_codec\x18\x06 \x01(\t\x12\x1e\n\x16payload_encoder_script\x18\x07 \x01(\t\x12\x1e\n\x16payload_decoder_script\x18\x08 \x01(\t\"\xb9\x01\n\x13\x41pplicationListItem\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\'\n\x0forganization_id\x18\x04 \x01(\x03R\x0eorganizationID\x12,\n\x12service_profile_id\x18\x05 \x01(\tR\x10serviceProfileID\x12\x1c\n\x14service_profile_name\x18\x06 \x01(\t\"A\n\x18\x43reateApplicationRequest\x12%\n\x0b\x61pplication\x18\x01 \x01(\x0b\x32\x10.api.Application\"\'\n\x19\x43reateApplicationResponse\x12\n\n\x02id\x18\x01 \x01(\x03\"#\n\x15GetApplicationRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"?\n\x16GetApplicationResponse\x12%\n\x0b\x61pplication\x18\x01 \x01(\x0b\x32\x10.api.Application\"A\n\x18UpdateApplicationRequest\x12%\n\x0b\x61pplication\x18\x01 \x01(\x0b\x32\x10.api.Application\"&\n\x18\x44\x65leteApplicationRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"p\n\x16ListApplicationRequest\x12\r\n\x05limit\x18\x01 \x01(\x03\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\'\n\x0forganization_id\x18\x03 \x01(\x03R\x0eorganizationID\x12\x0e\n\x06search\x18\x04 \x01(\t\"X\n\x17ListApplicationResponse\x12\x13\n\x0btotal_count\x18\x01 \x01(\x03\x12(\n\x06result\x18\x02 \x03(\x0b\x32\x18.api.ApplicationListItem\"3\n\x15HTTPIntegrationHeader\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xd4\x03\n\x0fHTTPIntegration\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\x12+\n\x07headers\x18\x02 \x03(\x0b\x32\x1a.api.HTTPIntegrationHeader\x12&\n\x0fuplink_data_url\x18\x03 \x01(\tR\ruplinkDataURL\x12\x32\n\x15join_notification_url\x18\x04 \x01(\tR\x13joinNotificationURL\x12\x30\n\x14\x61\x63k_notification_url\x18\x05 \x01(\tR\x12\x61\x63kNotificationURL\x12\x34\n\x16\x65rror_notification_url\x18\x06 \x01(\tR\x14\x65rrorNotificationURL\x12\x36\n\x17status_notification_url\x18\x07 \x01(\tR\x15statusNotificationURL\x12:\n\x19location_notification_url\x18\x08 \x01(\tR\x17locationNotificationURL\x12\x35\n\x17tx_ack_notification_url\x18\t \x01(\tR\x14txAckNotificationURL\"I\n\x1c\x43reateHTTPIntegrationRequest\x12)\n\x0bintegration\x18\x01 \x01(\x0b\x32\x14.api.HTTPIntegration\"B\n\x19GetHTTPIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"G\n\x1aGetHTTPIntegrationResponse\x12)\n\x0bintegration\x18\x01 \x01(\x0b\x32\x14.api.HTTPIntegration\"I\n\x1cUpdateHTTPIntegrationRequest\x12)\n\x0bintegration\x18\x01 \x01(\x0b\x32\x14.api.HTTPIntegration\"E\n\x1c\x44\x65leteHTTPIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"?\n\x16ListIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"9\n\x13IntegrationListItem\x12\"\n\x04kind\x18\x01 \x01(\x0e\x32\x14.api.IntegrationKind\"X\n\x17ListIntegrationResponse\x12\x13\n\x0btotal_count\x18\x01 \x01(\x03\x12(\n\x06result\x18\x02 \x03(\x0b\x32\x18.api.IntegrationListItem\"\xc8\x01\n\x13InfluxDBIntegration\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\n\n\x02\x64\x62\x18\x03 \x01(\t\x12\x10\n\x08username\x18\x04 \x01(\t\x12\x10\n\x08password\x18\x05 \x01(\t\x12\x1d\n\x15retention_policy_name\x18\x06 \x01(\t\x12)\n\tprecision\x18\x07 \x01(\x0e\x32\x16.api.InfluxDBPrecision\"Q\n CreateInfluxDBIntegrationRequest\x12-\n\x0bintegration\x18\x01 \x01(\x0b\x32\x18.api.InfluxDBIntegration\"F\n\x1dGetInfluxDBIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"O\n\x1eGetInfluxDBIntegrationResponse\x12-\n\x0bintegration\x18\x01 \x01(\x0b\x32\x18.api.InfluxDBIntegration\"Q\n UpdateInfluxDBIntegrationRequest\x12-\n\x0bintegration\x18\x01 \x01(\x0b\x32\x18.api.InfluxDBIntegration\"I\n DeleteInfluxDBIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"O\n\x16ThingsBoardIntegration\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\x12\x0e\n\x06server\x18\x02 \x01(\t\"W\n#CreateThingsBoardIntegrationRequest\x12\x30\n\x0bintegration\x18\x01 \x01(\x0b\x32\x1b.api.ThingsBoardIntegration\"I\n GetThingsBoardIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"U\n!GetThingsBoardIntegrationResponse\x12\x30\n\x0bintegration\x18\x01 \x01(\x0b\x32\x1b.api.ThingsBoardIntegration\"W\n#UpdateThingsBoardIntegrationRequest\x12\x30\n\x0bintegration\x18\x01 \x01(\x0b\x32\x1b.api.ThingsBoardIntegration\"L\n#DeleteThingsBoardIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"O\n\x14MyDevicesIntegration\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\"S\n!CreateMyDevicesIntegrationRequest\x12.\n\x0bintegration\x18\x01 \x01(\x0b\x32\x19.api.MyDevicesIntegration\"G\n\x1eGetMyDevicesIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"Q\n\x1fGetMyDevicesIntegrationResponse\x12.\n\x0bintegration\x18\x01 \x01(\x0b\x32\x19.api.MyDevicesIntegration\"S\n!UpdateMyDevicesIntegrationRequest\x12.\n\x0bintegration\x18\x01 \x01(\x0b\x32\x19.api.MyDevicesIntegration\"J\n!DeleteMyDevicesIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID*I\n\x0fIntegrationKind\x12\x08\n\x04HTTP\x10\x00\x12\x0c\n\x08INFLUXDB\x10\x01\x12\x0f\n\x0bTHINGSBOARD\x10\x02\x12\r\n\tMYDEVICES\x10\x03*?\n\x11InfluxDBPrecision\x12\x06\n\x02NS\x10\x00\x12\x05\n\x01U\x10\x01\x12\x06\n\x02MS\x10\x02\x12\x05\n\x01S\x10\x03\x12\x05\n\x01M\x10\x04\x12\x05\n\x01H\x10\x05\x32\x97\x1a\n\x12\x41pplicationService\x12\x65\n\x06\x43reate\x12\x1d.api.CreateApplicationRequest\x1a\x1e.api.CreateApplicationResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/api/applications:\x01*\x12^\n\x03Get\x12\x1a.api.GetApplicationRequest\x1a\x1b.api.GetApplicationResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/api/applications/{id}\x12n\n\x06Update\x12\x1d.api.UpdateApplicationRequest\x1a\x16.google.protobuf.Empty\"-\x82\xd3\xe4\x93\x02\'\x1a\"/api/applications/{application.id}:\x01*\x12_\n\x06\x44\x65lete\x12\x1d.api.DeleteApplicationRequest\x1a\x16.google.protobuf.Empty\"\x1e\x82\xd3\xe4\x93\x02\x18*\x16/api/applications/{id}\x12\\\n\x04List\x12\x1b.api.ListApplicationRequest\x1a\x1c.api.ListApplicationResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/api/applications\x12\x9f\x01\n\x15\x43reateHTTPIntegration\x12!.api.CreateHTTPIntegrationRequest\x1a\x16.google.protobuf.Empty\"K\x82\xd3\xe4\x93\x02\x45\"@/api/applications/{integration.application_id}/integrations/http:\x01*\x12\x93\x01\n\x12GetHTTPIntegration\x12\x1e.api.GetHTTPIntegrationRequest\x1a\x1f.api.GetHTTPIntegrationResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/api/applications/{application_id}/integrations/http\x12\x9f\x01\n\x15UpdateHTTPIntegration\x12!.api.UpdateHTTPIntegrationRequest\x1a\x16.google.protobuf.Empty\"K\x82\xd3\xe4\x93\x02\x45\x1a@/api/applications/{integration.application_id}/integrations/http:\x01*\x12\x90\x01\n\x15\x44\x65leteHTTPIntegration\x12!.api.DeleteHTTPIntegrationRequest\x1a\x16.google.protobuf.Empty\"<\x82\xd3\xe4\x93\x02\x36*4/api/applications/{application_id}/integrations/http\x12\xab\x01\n\x19\x43reateInfluxDBIntegration\x12%.api.CreateInfluxDBIntegrationRequest\x1a\x16.google.protobuf.Empty\"O\x82\xd3\xe4\x93\x02I\"D/api/applications/{integration.application_id}/integrations/influxdb:\x01*\x12\xa3\x01\n\x16GetInfluxDBIntegration\x12\".api.GetInfluxDBIntegrationRequest\x1a#.api.GetInfluxDBIntegrationResponse\"@\x82\xd3\xe4\x93\x02:\x12\x38/api/applications/{application_id}/integrations/influxdb\x12\xab\x01\n\x19UpdateInfluxDBIntegration\x12%.api.UpdateInfluxDBIntegrationRequest\x1a\x16.google.protobuf.Empty\"O\x82\xd3\xe4\x93\x02I\x1a\x44/api/applications/{integration.application_id}/integrations/influxdb:\x01*\x12\x9c\x01\n\x19\x44\x65leteInfluxDBIntegration\x12%.api.DeleteInfluxDBIntegrationRequest\x1a\x16.google.protobuf.Empty\"@\x82\xd3\xe4\x93\x02:*8/api/applications/{application_id}/integrations/influxdb\x12\xb4\x01\n\x1c\x43reateThingsBoardIntegration\x12(.api.CreateThingsBoardIntegrationRequest\x1a\x16.google.protobuf.Empty\"R\x82\xd3\xe4\x93\x02L\"G/api/applications/{integration.application_id}/integrations/thingsboard:\x01*\x12\xaf\x01\n\x19GetThingsBoardIntegration\x12%.api.GetThingsBoardIntegrationRequest\x1a&.api.GetThingsBoardIntegrationResponse\"C\x82\xd3\xe4\x93\x02=\x12;/api/applications/{application_id}/integrations/thingsboard\x12\xb4\x01\n\x1cUpdateThingsBoardIntegration\x12(.api.UpdateThingsBoardIntegrationRequest\x1a\x16.google.protobuf.Empty\"R\x82\xd3\xe4\x93\x02L\x1aG/api/applications/{integration.application_id}/integrations/thingsboard:\x01*\x12\xa5\x01\n\x1c\x44\x65leteThingsBoardIntegration\x12(.api.DeleteThingsBoardIntegrationRequest\x1a\x16.google.protobuf.Empty\"C\x82\xd3\xe4\x93\x02=*;/api/applications/{application_id}/integrations/thingsboard\x12\xae\x01\n\x1a\x43reateMyDevicesIntegration\x12&.api.CreateMyDevicesIntegrationRequest\x1a\x16.google.protobuf.Empty\"P\x82\xd3\xe4\x93\x02J\"E/api/applications/{integration.application_id}/integrations/mydevices:\x01*\x12\xa7\x01\n\x17GetMyDevicesIntegration\x12#.api.GetMyDevicesIntegrationRequest\x1a$.api.GetMyDevicesIntegrationResponse\"A\x82\xd3\xe4\x93\x02;\x12\x39/api/applications/{application_id}/integrations/mydevices\x12\xae\x01\n\x1aUpdateMyDevicesIntegration\x12&.api.UpdateMyDevicesIntegrationRequest\x1a\x16.google.protobuf.Empty\"P\x82\xd3\xe4\x93\x02J\x1a\x45/api/applications/{integration.application_id}/integrations/mydevices:\x01*\x12\x9f\x01\n\x1a\x44\x65leteMyDevicesIntegration\x12&.api.DeleteMyDevicesIntegrationRequest\x1a\x16.google.protobuf.Empty\"A\x82\xd3\xe4\x93\x02;*9/api/applications/{application_id}/integrations/mydevices\x12\x86\x01\n\x10ListIntegrations\x12\x1b.api.ListIntegrationRequest\x1a\x1c.api.ListIntegrationResponse\"7\x82\xd3\xe4\x93\x02\x31\x12//api/applications/{application_id}/integrationsB9Z7github.com/brocaar/chirpstack-api/go/v3/as/external/apib\x06proto3'
+  serialized_pb=b'\n3chirpstack-api/as_pb/external/api/application.proto\x12\x03\x61pi\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xea\x01\n\x0b\x41pplication\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\'\n\x0forganization_id\x18\x04 \x01(\x03R\x0eorganizationID\x12,\n\x12service_profile_id\x18\x05 \x01(\tR\x10serviceProfileID\x12\x15\n\rpayload_codec\x18\x06 \x01(\t\x12\x1e\n\x16payload_encoder_script\x18\x07 \x01(\t\x12\x1e\n\x16payload_decoder_script\x18\x08 \x01(\t\"\xb9\x01\n\x13\x41pplicationListItem\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\'\n\x0forganization_id\x18\x04 \x01(\x03R\x0eorganizationID\x12,\n\x12service_profile_id\x18\x05 \x01(\tR\x10serviceProfileID\x12\x1c\n\x14service_profile_name\x18\x06 \x01(\t\"A\n\x18\x43reateApplicationRequest\x12%\n\x0b\x61pplication\x18\x01 \x01(\x0b\x32\x10.api.Application\"\'\n\x19\x43reateApplicationResponse\x12\n\n\x02id\x18\x01 \x01(\x03\"#\n\x15GetApplicationRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"?\n\x16GetApplicationResponse\x12%\n\x0b\x61pplication\x18\x01 \x01(\x0b\x32\x10.api.Application\"A\n\x18UpdateApplicationRequest\x12%\n\x0b\x61pplication\x18\x01 \x01(\x0b\x32\x10.api.Application\"&\n\x18\x44\x65leteApplicationRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"p\n\x16ListApplicationRequest\x12\r\n\x05limit\x18\x01 \x01(\x03\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\'\n\x0forganization_id\x18\x03 \x01(\x03R\x0eorganizationID\x12\x0e\n\x06search\x18\x04 \x01(\t\"X\n\x17ListApplicationResponse\x12\x13\n\x0btotal_count\x18\x01 \x01(\x03\x12(\n\x06result\x18\x02 \x03(\x0b\x32\x18.api.ApplicationListItem\"3\n\x15HTTPIntegrationHeader\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xd4\x03\n\x0fHTTPIntegration\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\x12+\n\x07headers\x18\x02 \x03(\x0b\x32\x1a.api.HTTPIntegrationHeader\x12&\n\x0fuplink_data_url\x18\x03 \x01(\tR\ruplinkDataURL\x12\x32\n\x15join_notification_url\x18\x04 \x01(\tR\x13joinNotificationURL\x12\x30\n\x14\x61\x63k_notification_url\x18\x05 \x01(\tR\x12\x61\x63kNotificationURL\x12\x34\n\x16\x65rror_notification_url\x18\x06 \x01(\tR\x14\x65rrorNotificationURL\x12\x36\n\x17status_notification_url\x18\x07 \x01(\tR\x15statusNotificationURL\x12:\n\x19location_notification_url\x18\x08 \x01(\tR\x17locationNotificationURL\x12\x35\n\x17tx_ack_notification_url\x18\t \x01(\tR\x14txAckNotificationURL\"I\n\x1c\x43reateHTTPIntegrationRequest\x12)\n\x0bintegration\x18\x01 \x01(\x0b\x32\x14.api.HTTPIntegration\"B\n\x19GetHTTPIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"G\n\x1aGetHTTPIntegrationResponse\x12)\n\x0bintegration\x18\x01 \x01(\x0b\x32\x14.api.HTTPIntegration\"I\n\x1cUpdateHTTPIntegrationRequest\x12)\n\x0bintegration\x18\x01 \x01(\x0b\x32\x14.api.HTTPIntegration\"E\n\x1c\x44\x65leteHTTPIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"?\n\x16ListIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"9\n\x13IntegrationListItem\x12\"\n\x04kind\x18\x01 \x01(\x0e\x32\x14.api.IntegrationKind\"X\n\x17ListIntegrationResponse\x12\x13\n\x0btotal_count\x18\x01 \x01(\x03\x12(\n\x06result\x18\x02 \x03(\x0b\x32\x18.api.IntegrationListItem\"\xc8\x01\n\x13InfluxDBIntegration\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\n\n\x02\x64\x62\x18\x03 \x01(\t\x12\x10\n\x08username\x18\x04 \x01(\t\x12\x10\n\x08password\x18\x05 \x01(\t\x12\x1d\n\x15retention_policy_name\x18\x06 \x01(\t\x12)\n\tprecision\x18\x07 \x01(\x0e\x32\x16.api.InfluxDBPrecision\"Q\n CreateInfluxDBIntegrationRequest\x12-\n\x0bintegration\x18\x01 \x01(\x0b\x32\x18.api.InfluxDBIntegration\"F\n\x1dGetInfluxDBIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"O\n\x1eGetInfluxDBIntegrationResponse\x12-\n\x0bintegration\x18\x01 \x01(\x0b\x32\x18.api.InfluxDBIntegration\"Q\n UpdateInfluxDBIntegrationRequest\x12-\n\x0bintegration\x18\x01 \x01(\x0b\x32\x18.api.InfluxDBIntegration\"I\n DeleteInfluxDBIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"O\n\x16ThingsBoardIntegration\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\x12\x0e\n\x06server\x18\x02 \x01(\t\"W\n#CreateThingsBoardIntegrationRequest\x12\x30\n\x0bintegration\x18\x01 \x01(\x0b\x32\x1b.api.ThingsBoardIntegration\"I\n GetThingsBoardIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"U\n!GetThingsBoardIntegrationResponse\x12\x30\n\x0bintegration\x18\x01 \x01(\x0b\x32\x1b.api.ThingsBoardIntegration\"W\n#UpdateThingsBoardIntegrationRequest\x12\x30\n\x0bintegration\x18\x01 \x01(\x0b\x32\x1b.api.ThingsBoardIntegration\"L\n#DeleteThingsBoardIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"O\n\x14MyDevicesIntegration\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\"S\n!CreateMyDevicesIntegrationRequest\x12.\n\x0bintegration\x18\x01 \x01(\x0b\x32\x19.api.MyDevicesIntegration\"G\n\x1eGetMyDevicesIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"Q\n\x1fGetMyDevicesIntegrationResponse\x12.\n\x0bintegration\x18\x01 \x01(\x0b\x32\x19.api.MyDevicesIntegration\"S\n!UpdateMyDevicesIntegrationRequest\x12.\n\x0bintegration\x18\x01 \x01(\x0b\x32\x19.api.MyDevicesIntegration\"J\n!DeleteMyDevicesIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"I\n\x10KafkaIntegration\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\x12\x0e\n\x06server\x18\x02 \x01(\t\"K\n\x1d\x43reateKafkaIntegrationRequest\x12*\n\x0bintegration\x18\x01 \x01(\x0b\x32\x15.api.KafkaIntegration\"C\n\x1aGetKafkaIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID\"I\n\x1bGetKafkaIntegrationResponse\x12*\n\x0bintegration\x18\x01 \x01(\x0b\x32\x15.api.KafkaIntegration\"K\n\x1dUpdateKafkaIntegrationRequest\x12*\n\x0bintegration\x18\x01 \x01(\x0b\x32\x15.api.KafkaIntegration\"F\n\x1d\x44\x65leteKafkaIntegrationRequest\x12%\n\x0e\x61pplication_id\x18\x01 \x01(\x03R\rapplicationID*T\n\x0fIntegrationKind\x12\x08\n\x04HTTP\x10\x00\x12\x0c\n\x08INFLUXDB\x10\x01\x12\x0f\n\x0bTHINGSBOARD\x10\x02\x12\r\n\tMYDEVICES\x10\x03\x12\t\n\x05KAFKA\x10\x04*?\n\x11InfluxDBPrecision\x12\x06\n\x02NS\x10\x00\x12\x05\n\x01U\x10\x01\x12\x06\n\x02MS\x10\x02\x12\x05\n\x01S\x10\x03\x12\x05\n\x01M\x10\x04\x12\x05\n\x01H\x10\x05\x32\x91\x1f\n\x12\x41pplicationService\x12\x65\n\x06\x43reate\x12\x1d.api.CreateApplicationRequest\x1a\x1e.api.CreateApplicationResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/api/applications:\x01*\x12^\n\x03Get\x12\x1a.api.GetApplicationRequest\x1a\x1b.api.GetApplicationResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/api/applications/{id}\x12n\n\x06Update\x12\x1d.api.UpdateApplicationRequest\x1a\x16.google.protobuf.Empty\"-\x82\xd3\xe4\x93\x02\'\x1a\"/api/applications/{application.id}:\x01*\x12_\n\x06\x44\x65lete\x12\x1d.api.DeleteApplicationRequest\x1a\x16.google.protobuf.Empty\"\x1e\x82\xd3\xe4\x93\x02\x18*\x16/api/applications/{id}\x12\\\n\x04List\x12\x1b.api.ListApplicationRequest\x1a\x1c.api.ListApplicationResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/api/applications\x12\x9f\x01\n\x15\x43reateHTTPIntegration\x12!.api.CreateHTTPIntegrationRequest\x1a\x16.google.protobuf.Empty\"K\x82\xd3\xe4\x93\x02\x45\"@/api/applications/{integration.application_id}/integrations/http:\x01*\x12\x93\x01\n\x12GetHTTPIntegration\x12\x1e.api.GetHTTPIntegrationRequest\x1a\x1f.api.GetHTTPIntegrationResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/api/applications/{application_id}/integrations/http\x12\x9f\x01\n\x15UpdateHTTPIntegration\x12!.api.UpdateHTTPIntegrationRequest\x1a\x16.google.protobuf.Empty\"K\x82\xd3\xe4\x93\x02\x45\x1a@/api/applications/{integration.application_id}/integrations/http:\x01*\x12\x90\x01\n\x15\x44\x65leteHTTPIntegration\x12!.api.DeleteHTTPIntegrationRequest\x1a\x16.google.protobuf.Empty\"<\x82\xd3\xe4\x93\x02\x36*4/api/applications/{application_id}/integrations/http\x12\xab\x01\n\x19\x43reateInfluxDBIntegration\x12%.api.CreateInfluxDBIntegrationRequest\x1a\x16.google.protobuf.Empty\"O\x82\xd3\xe4\x93\x02I\"D/api/applications/{integration.application_id}/integrations/influxdb:\x01*\x12\xa3\x01\n\x16GetInfluxDBIntegration\x12\".api.GetInfluxDBIntegrationRequest\x1a#.api.GetInfluxDBIntegrationResponse\"@\x82\xd3\xe4\x93\x02:\x12\x38/api/applications/{application_id}/integrations/influxdb\x12\xab\x01\n\x19UpdateInfluxDBIntegration\x12%.api.UpdateInfluxDBIntegrationRequest\x1a\x16.google.protobuf.Empty\"O\x82\xd3\xe4\x93\x02I\x1a\x44/api/applications/{integration.application_id}/integrations/influxdb:\x01*\x12\x9c\x01\n\x19\x44\x65leteInfluxDBIntegration\x12%.api.DeleteInfluxDBIntegrationRequest\x1a\x16.google.protobuf.Empty\"@\x82\xd3\xe4\x93\x02:*8/api/applications/{application_id}/integrations/influxdb\x12\xb4\x01\n\x1c\x43reateThingsBoardIntegration\x12(.api.CreateThingsBoardIntegrationRequest\x1a\x16.google.protobuf.Empty\"R\x82\xd3\xe4\x93\x02L\"G/api/applications/{integration.application_id}/integrations/thingsboard:\x01*\x12\xaf\x01\n\x19GetThingsBoardIntegration\x12%.api.GetThingsBoardIntegrationRequest\x1a&.api.GetThingsBoardIntegrationResponse\"C\x82\xd3\xe4\x93\x02=\x12;/api/applications/{application_id}/integrations/thingsboard\x12\xb4\x01\n\x1cUpdateThingsBoardIntegration\x12(.api.UpdateThingsBoardIntegrationRequest\x1a\x16.google.protobuf.Empty\"R\x82\xd3\xe4\x93\x02L\x1aG/api/applications/{integration.application_id}/integrations/thingsboard:\x01*\x12\xa5\x01\n\x1c\x44\x65leteThingsBoardIntegration\x12(.api.DeleteThingsBoardIntegrationRequest\x1a\x16.google.protobuf.Empty\"C\x82\xd3\xe4\x93\x02=*;/api/applications/{application_id}/integrations/thingsboard\x12\xae\x01\n\x1a\x43reateMyDevicesIntegration\x12&.api.CreateMyDevicesIntegrationRequest\x1a\x16.google.protobuf.Empty\"P\x82\xd3\xe4\x93\x02J\"E/api/applications/{integration.application_id}/integrations/mydevices:\x01*\x12\xa7\x01\n\x17GetMyDevicesIntegration\x12#.api.GetMyDevicesIntegrationRequest\x1a$.api.GetMyDevicesIntegrationResponse\"A\x82\xd3\xe4\x93\x02;\x12\x39/api/applications/{application_id}/integrations/mydevices\x12\xae\x01\n\x1aUpdateMyDevicesIntegration\x12&.api.UpdateMyDevicesIntegrationRequest\x1a\x16.google.protobuf.Empty\"P\x82\xd3\xe4\x93\x02J\x1a\x45/api/applications/{integration.application_id}/integrations/mydevices:\x01*\x12\x9f\x01\n\x1a\x44\x65leteMyDevicesIntegration\x12&.api.DeleteMyDevicesIntegrationRequest\x1a\x16.google.protobuf.Empty\"A\x82\xd3\xe4\x93\x02;*9/api/applications/{application_id}/integrations/mydevices\x12\xa2\x01\n\x16\x43reateKafkaIntegration\x12\".api.CreateKafkaIntegrationRequest\x1a\x16.google.protobuf.Empty\"L\x82\xd3\xe4\x93\x02\x46\"A/api/applications/{integration.application_id}/integrations/kafka:\x01*\x12\x97\x01\n\x13GetKafkaIntegration\x12\x1f.api.GetKafkaIntegrationRequest\x1a .api.GetKafkaIntegrationResponse\"=\x82\xd3\xe4\x93\x02\x37\x12\x35/api/applications/{application_id}/integrations/kafka\x12\xa2\x01\n\x16UpdateKafkaIntegration\x12\".api.UpdateKafkaIntegrationRequest\x1a\x16.google.protobuf.Empty\"L\x82\xd3\xe4\x93\x02\x46\x1a\x41/api/applications/{integration.application_id}/integrations/kafka:\x01*\x12\x93\x01\n\x16\x44\x65leteKafkaIntegration\x12\".api.DeleteKafkaIntegrationRequest\x1a\x16.google.protobuf.Empty\"=\x82\xd3\xe4\x93\x02\x37*5/api/applications/{application_id}/integrations/kafka\x12\x86\x01\n\x10ListIntegrations\x12\x1b.api.ListIntegrationRequest\x1a\x1c.api.ListIntegrationResponse\"7\x82\xd3\xe4\x93\x02\x31\x12//api/applications/{application_id}/integrationsB9Z7github.com/brocaar/chirpstack-api/go/v3/as/external/apib\x06proto3'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -47,11 +47,15 @@ _INTEGRATIONKIND = _descriptor.EnumDescriptor(
       name='MYDEVICES', index=3, number=3,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='KAFKA', index=4, number=4,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3744,
-  serialized_end=3817,
+  serialized_start=4189,
+  serialized_end=4273,
 )
 _sym_db.RegisterEnumDescriptor(_INTEGRATIONKIND)
 
@@ -89,8 +93,8 @@ _INFLUXDBPRECISION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3819,
-  serialized_end=3882,
+  serialized_start=4275,
+  serialized_end=4338,
 )
 _sym_db.RegisterEnumDescriptor(_INFLUXDBPRECISION)
 
@@ -99,6 +103,7 @@ HTTP = 0
 INFLUXDB = 1
 THINGSBOARD = 2
 MYDEVICES = 3
+KAFKA = 4
 NS = 0
 U = 1
 MS = 2
@@ -1523,6 +1528,199 @@ _DELETEMYDEVICESINTEGRATIONREQUEST = _descriptor.Descriptor(
   serialized_end=3742,
 )
 
+
+_KAFKAINTEGRATION = _descriptor.Descriptor(
+  name='KafkaIntegration',
+  full_name='api.KafkaIntegration',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='application_id', full_name='api.KafkaIntegration.application_id', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='applicationID', file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='server', full_name='api.KafkaIntegration.server', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3744,
+  serialized_end=3817,
+)
+
+
+_CREATEKAFKAINTEGRATIONREQUEST = _descriptor.Descriptor(
+  name='CreateKafkaIntegrationRequest',
+  full_name='api.CreateKafkaIntegrationRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='integration', full_name='api.CreateKafkaIntegrationRequest.integration', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3819,
+  serialized_end=3894,
+)
+
+
+_GETKAFKAINTEGRATIONREQUEST = _descriptor.Descriptor(
+  name='GetKafkaIntegrationRequest',
+  full_name='api.GetKafkaIntegrationRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='application_id', full_name='api.GetKafkaIntegrationRequest.application_id', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='applicationID', file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3896,
+  serialized_end=3963,
+)
+
+
+_GETKAFKAINTEGRATIONRESPONSE = _descriptor.Descriptor(
+  name='GetKafkaIntegrationResponse',
+  full_name='api.GetKafkaIntegrationResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='integration', full_name='api.GetKafkaIntegrationResponse.integration', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3965,
+  serialized_end=4038,
+)
+
+
+_UPDATEKAFKAINTEGRATIONREQUEST = _descriptor.Descriptor(
+  name='UpdateKafkaIntegrationRequest',
+  full_name='api.UpdateKafkaIntegrationRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='integration', full_name='api.UpdateKafkaIntegrationRequest.integration', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4040,
+  serialized_end=4115,
+)
+
+
+_DELETEKAFKAINTEGRATIONREQUEST = _descriptor.Descriptor(
+  name='DeleteKafkaIntegrationRequest',
+  full_name='api.DeleteKafkaIntegrationRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='application_id', full_name='api.DeleteKafkaIntegrationRequest.application_id', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='applicationID', file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4117,
+  serialized_end=4187,
+)
+
 _CREATEAPPLICATIONREQUEST.fields_by_name['application'].message_type = _APPLICATION
 _GETAPPLICATIONRESPONSE.fields_by_name['application'].message_type = _APPLICATION
 _UPDATEAPPLICATIONREQUEST.fields_by_name['application'].message_type = _APPLICATION
@@ -1543,6 +1741,9 @@ _UPDATETHINGSBOARDINTEGRATIONREQUEST.fields_by_name['integration'].message_type 
 _CREATEMYDEVICESINTEGRATIONREQUEST.fields_by_name['integration'].message_type = _MYDEVICESINTEGRATION
 _GETMYDEVICESINTEGRATIONRESPONSE.fields_by_name['integration'].message_type = _MYDEVICESINTEGRATION
 _UPDATEMYDEVICESINTEGRATIONREQUEST.fields_by_name['integration'].message_type = _MYDEVICESINTEGRATION
+_CREATEKAFKAINTEGRATIONREQUEST.fields_by_name['integration'].message_type = _KAFKAINTEGRATION
+_GETKAFKAINTEGRATIONRESPONSE.fields_by_name['integration'].message_type = _KAFKAINTEGRATION
+_UPDATEKAFKAINTEGRATIONREQUEST.fields_by_name['integration'].message_type = _KAFKAINTEGRATION
 DESCRIPTOR.message_types_by_name['Application'] = _APPLICATION
 DESCRIPTOR.message_types_by_name['ApplicationListItem'] = _APPLICATIONLISTITEM
 DESCRIPTOR.message_types_by_name['CreateApplicationRequest'] = _CREATEAPPLICATIONREQUEST
@@ -1581,6 +1782,12 @@ DESCRIPTOR.message_types_by_name['GetMyDevicesIntegrationRequest'] = _GETMYDEVIC
 DESCRIPTOR.message_types_by_name['GetMyDevicesIntegrationResponse'] = _GETMYDEVICESINTEGRATIONRESPONSE
 DESCRIPTOR.message_types_by_name['UpdateMyDevicesIntegrationRequest'] = _UPDATEMYDEVICESINTEGRATIONREQUEST
 DESCRIPTOR.message_types_by_name['DeleteMyDevicesIntegrationRequest'] = _DELETEMYDEVICESINTEGRATIONREQUEST
+DESCRIPTOR.message_types_by_name['KafkaIntegration'] = _KAFKAINTEGRATION
+DESCRIPTOR.message_types_by_name['CreateKafkaIntegrationRequest'] = _CREATEKAFKAINTEGRATIONREQUEST
+DESCRIPTOR.message_types_by_name['GetKafkaIntegrationRequest'] = _GETKAFKAINTEGRATIONREQUEST
+DESCRIPTOR.message_types_by_name['GetKafkaIntegrationResponse'] = _GETKAFKAINTEGRATIONRESPONSE
+DESCRIPTOR.message_types_by_name['UpdateKafkaIntegrationRequest'] = _UPDATEKAFKAINTEGRATIONREQUEST
+DESCRIPTOR.message_types_by_name['DeleteKafkaIntegrationRequest'] = _DELETEKAFKAINTEGRATIONREQUEST
 DESCRIPTOR.enum_types_by_name['IntegrationKind'] = _INTEGRATIONKIND
 DESCRIPTOR.enum_types_by_name['InfluxDBPrecision'] = _INFLUXDBPRECISION
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -1851,6 +2058,48 @@ DeleteMyDevicesIntegrationRequest = _reflection.GeneratedProtocolMessageType('De
   })
 _sym_db.RegisterMessage(DeleteMyDevicesIntegrationRequest)
 
+KafkaIntegration = _reflection.GeneratedProtocolMessageType('KafkaIntegration', (_message.Message,), {
+  'DESCRIPTOR' : _KAFKAINTEGRATION,
+  '__module__' : 'chirpstack_api.as_pb.external.api.application_pb2'
+  # @@protoc_insertion_point(class_scope:api.KafkaIntegration)
+  })
+_sym_db.RegisterMessage(KafkaIntegration)
+
+CreateKafkaIntegrationRequest = _reflection.GeneratedProtocolMessageType('CreateKafkaIntegrationRequest', (_message.Message,), {
+  'DESCRIPTOR' : _CREATEKAFKAINTEGRATIONREQUEST,
+  '__module__' : 'chirpstack_api.as_pb.external.api.application_pb2'
+  # @@protoc_insertion_point(class_scope:api.CreateKafkaIntegrationRequest)
+  })
+_sym_db.RegisterMessage(CreateKafkaIntegrationRequest)
+
+GetKafkaIntegrationRequest = _reflection.GeneratedProtocolMessageType('GetKafkaIntegrationRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETKAFKAINTEGRATIONREQUEST,
+  '__module__' : 'chirpstack_api.as_pb.external.api.application_pb2'
+  # @@protoc_insertion_point(class_scope:api.GetKafkaIntegrationRequest)
+  })
+_sym_db.RegisterMessage(GetKafkaIntegrationRequest)
+
+GetKafkaIntegrationResponse = _reflection.GeneratedProtocolMessageType('GetKafkaIntegrationResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETKAFKAINTEGRATIONRESPONSE,
+  '__module__' : 'chirpstack_api.as_pb.external.api.application_pb2'
+  # @@protoc_insertion_point(class_scope:api.GetKafkaIntegrationResponse)
+  })
+_sym_db.RegisterMessage(GetKafkaIntegrationResponse)
+
+UpdateKafkaIntegrationRequest = _reflection.GeneratedProtocolMessageType('UpdateKafkaIntegrationRequest', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEKAFKAINTEGRATIONREQUEST,
+  '__module__' : 'chirpstack_api.as_pb.external.api.application_pb2'
+  # @@protoc_insertion_point(class_scope:api.UpdateKafkaIntegrationRequest)
+  })
+_sym_db.RegisterMessage(UpdateKafkaIntegrationRequest)
+
+DeleteKafkaIntegrationRequest = _reflection.GeneratedProtocolMessageType('DeleteKafkaIntegrationRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEKAFKAINTEGRATIONREQUEST,
+  '__module__' : 'chirpstack_api.as_pb.external.api.application_pb2'
+  # @@protoc_insertion_point(class_scope:api.DeleteKafkaIntegrationRequest)
+  })
+_sym_db.RegisterMessage(DeleteKafkaIntegrationRequest)
+
 
 DESCRIPTOR._options = None
 
@@ -1860,8 +2109,8 @@ _APPLICATIONSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=3885,
-  serialized_end=7236,
+  serialized_start=4341,
+  serialized_end=8326,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
@@ -2053,9 +2302,45 @@ _APPLICATIONSERVICE = _descriptor.ServiceDescriptor(
     serialized_options=b'\202\323\344\223\002;*9/api/applications/{application_id}/integrations/mydevices',
   ),
   _descriptor.MethodDescriptor(
+    name='CreateKafkaIntegration',
+    full_name='api.ApplicationService.CreateKafkaIntegration',
+    index=21,
+    containing_service=None,
+    input_type=_CREATEKAFKAINTEGRATIONREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    serialized_options=b'\202\323\344\223\002F\"A/api/applications/{integration.application_id}/integrations/kafka:\001*',
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetKafkaIntegration',
+    full_name='api.ApplicationService.GetKafkaIntegration',
+    index=22,
+    containing_service=None,
+    input_type=_GETKAFKAINTEGRATIONREQUEST,
+    output_type=_GETKAFKAINTEGRATIONRESPONSE,
+    serialized_options=b'\202\323\344\223\0027\0225/api/applications/{application_id}/integrations/kafka',
+  ),
+  _descriptor.MethodDescriptor(
+    name='UpdateKafkaIntegration',
+    full_name='api.ApplicationService.UpdateKafkaIntegration',
+    index=23,
+    containing_service=None,
+    input_type=_UPDATEKAFKAINTEGRATIONREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    serialized_options=b'\202\323\344\223\002F\032A/api/applications/{integration.application_id}/integrations/kafka:\001*',
+  ),
+  _descriptor.MethodDescriptor(
+    name='DeleteKafkaIntegration',
+    full_name='api.ApplicationService.DeleteKafkaIntegration',
+    index=24,
+    containing_service=None,
+    input_type=_DELETEKAFKAINTEGRATIONREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    serialized_options=b'\202\323\344\223\0027*5/api/applications/{application_id}/integrations/kafka',
+  ),
+  _descriptor.MethodDescriptor(
     name='ListIntegrations',
     full_name='api.ApplicationService.ListIntegrations',
-    index=21,
+    index=25,
     containing_service=None,
     input_type=_LISTINTEGRATIONREQUEST,
     output_type=_LISTINTEGRATIONRESPONSE,
