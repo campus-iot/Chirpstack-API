@@ -937,11 +937,142 @@ export namespace DeleteMyDevicesIntegrationRequest {
   }
 }
 
+export class KafkaIntegration extends jspb.Message {
+  getApplicationId(): number;
+  setApplicationId(value: number): void;
+
+  getServer(): string;
+  setServer(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): KafkaIntegration.AsObject;
+  static toObject(includeInstance: boolean, msg: KafkaIntegration): KafkaIntegration.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: KafkaIntegration, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): KafkaIntegration;
+  static deserializeBinaryFromReader(message: KafkaIntegration, reader: jspb.BinaryReader): KafkaIntegration;
+}
+
+export namespace KafkaIntegration {
+  export type AsObject = {
+    applicationId: number,
+    server: string,
+  }
+}
+
+export class CreateKafkaIntegrationRequest extends jspb.Message {
+  hasIntegration(): boolean;
+  clearIntegration(): void;
+  getIntegration(): KafkaIntegration | undefined;
+  setIntegration(value?: KafkaIntegration): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CreateKafkaIntegrationRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: CreateKafkaIntegrationRequest): CreateKafkaIntegrationRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: CreateKafkaIntegrationRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CreateKafkaIntegrationRequest;
+  static deserializeBinaryFromReader(message: CreateKafkaIntegrationRequest, reader: jspb.BinaryReader): CreateKafkaIntegrationRequest;
+}
+
+export namespace CreateKafkaIntegrationRequest {
+  export type AsObject = {
+    integration?: KafkaIntegration.AsObject,
+  }
+}
+
+export class GetKafkaIntegrationRequest extends jspb.Message {
+  getApplicationId(): number;
+  setApplicationId(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetKafkaIntegrationRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetKafkaIntegrationRequest): GetKafkaIntegrationRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: GetKafkaIntegrationRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetKafkaIntegrationRequest;
+  static deserializeBinaryFromReader(message: GetKafkaIntegrationRequest, reader: jspb.BinaryReader): GetKafkaIntegrationRequest;
+}
+
+export namespace GetKafkaIntegrationRequest {
+  export type AsObject = {
+    applicationId: number,
+  }
+}
+
+export class GetKafkaIntegrationResponse extends jspb.Message {
+  hasIntegration(): boolean;
+  clearIntegration(): void;
+  getIntegration(): KafkaIntegration | undefined;
+  setIntegration(value?: KafkaIntegration): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetKafkaIntegrationResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetKafkaIntegrationResponse): GetKafkaIntegrationResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: GetKafkaIntegrationResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetKafkaIntegrationResponse;
+  static deserializeBinaryFromReader(message: GetKafkaIntegrationResponse, reader: jspb.BinaryReader): GetKafkaIntegrationResponse;
+}
+
+export namespace GetKafkaIntegrationResponse {
+  export type AsObject = {
+    integration?: KafkaIntegration.AsObject,
+  }
+}
+
+export class UpdateKafkaIntegrationRequest extends jspb.Message {
+  hasIntegration(): boolean;
+  clearIntegration(): void;
+  getIntegration(): KafkaIntegration | undefined;
+  setIntegration(value?: KafkaIntegration): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UpdateKafkaIntegrationRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: UpdateKafkaIntegrationRequest): UpdateKafkaIntegrationRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: UpdateKafkaIntegrationRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UpdateKafkaIntegrationRequest;
+  static deserializeBinaryFromReader(message: UpdateKafkaIntegrationRequest, reader: jspb.BinaryReader): UpdateKafkaIntegrationRequest;
+}
+
+export namespace UpdateKafkaIntegrationRequest {
+  export type AsObject = {
+    integration?: KafkaIntegration.AsObject,
+  }
+}
+
+export class DeleteKafkaIntegrationRequest extends jspb.Message {
+  getApplicationId(): number;
+  setApplicationId(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeleteKafkaIntegrationRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DeleteKafkaIntegrationRequest): DeleteKafkaIntegrationRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: DeleteKafkaIntegrationRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeleteKafkaIntegrationRequest;
+  static deserializeBinaryFromReader(message: DeleteKafkaIntegrationRequest, reader: jspb.BinaryReader): DeleteKafkaIntegrationRequest;
+}
+
+export namespace DeleteKafkaIntegrationRequest {
+  export type AsObject = {
+    applicationId: number,
+  }
+}
+
 export interface IntegrationKindMap {
   HTTP: 0;
   INFLUXDB: 1;
   THINGSBOARD: 2;
   MYDEVICES: 3;
+  KAFKA: 4;
 }
 
 export const IntegrationKind: IntegrationKindMap;

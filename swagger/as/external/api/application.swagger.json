@@ -256,6 +256,58 @@
         ]
       }
     },
+    "/api/applications/{application_id}/integrations/kafka": {
+      "get": {
+        "summary": "GetKafkaIntegration returns the Kafkad application-integration.",
+        "operationId": "GetKafkaIntegration",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/apiGetKafkaIntegrationResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "application_id",
+            "description": "Application ID.",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "ApplicationService"
+        ]
+      },
+      "delete": {
+        "summary": "DeleteKafkaIntegration deletes the Kafka application-integration.",
+        "operationId": "DeleteKafkaIntegration",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "application_id",
+            "description": "Application ID.",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "ApplicationService"
+        ]
+      }
+    },
     "/api/applications/{application_id}/integrations/mydevices": {
       "get": {
         "summary": "GetMyDevicesIntegration returns the MyDevices application-integration.",
@@ -548,6 +600,74 @@
         ]
       }
     },
+    "/api/applications/{integration.application_id}/integrations/kafka": {
+      "post": {
+        "summary": "CreateKafkaIntegration creates a Kafka application-integration.",
+        "operationId": "CreateKafkaIntegration",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "integration.application_id",
+            "description": "Application ID.",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/apiCreateKafkaIntegrationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "ApplicationService"
+        ]
+      },
+      "put": {
+        "summary": "UpdateKafkaIntegration updates the Kafka application-integration.",
+        "operationId": "UpdateKafkaIntegration",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "integration.application_id",
+            "description": "Application ID.",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/apiUpdateKafkaIntegrationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "ApplicationService"
+        ]
+      }
+    },
     "/api/applications/{integration.application_id}/integrations/mydevices": {
       "post": {
         "summary": "CreateMyDevicesIntegration creates a MyDevices application-integration.",
@@ -793,6 +913,15 @@
         }
       }
     },
+    "apiCreateKafkaIntegrationRequest": {
+      "type": "object",
+      "properties": {
+        "integration": {
+          "$ref": "#/definitions/apiKafkaIntegration",
+          "description": "Integration object to create."
+        }
+      }
+    },
     "apiCreateMyDevicesIntegrationRequest": {
       "type": "object",
       "properties": {
@@ -834,6 +963,15 @@
       "properties": {
         "integration": {
           "$ref": "#/definitions/apiInfluxDBIntegration",
+          "description": "Integration object."
+        }
+      }
+    },
+    "apiGetKafkaIntegrationResponse": {
+      "type": "object",
+      "properties": {
+        "integration": {
+          "$ref": "#/definitions/apiKafkaIntegration",
           "description": "Integration object."
         }
       }
@@ -966,7 +1104,8 @@
         "HTTP",
         "INFLUXDB",
         "THINGSBOARD",
-        "MYDEVICES"
+        "MYDEVICES",
+        "KAFKA"
       ],
       "default": "HTTP"
     },
@@ -976,6 +1115,20 @@
         "kind": {
           "$ref": "#/definitions/apiIntegrationKind",
           "description": "Integration kind."
+        }
+      }
+    },
+    "apiKafkaIntegration": {
+      "type": "object",
+      "properties": {
+        "applicationID": {
+          "type": "string",
+          "format": "int64",
+          "description": "Application ID."
+        },
+        "server": {
+          "type": "string",
+          "title": "Kafka server endpoint, e.g. https://example.com"
         }
       }
     },
@@ -1064,6 +1217,15 @@
       "properties": {
         "integration": {
           "$ref": "#/definitions/apiInfluxDBIntegration",
+          "description": "Integration object."
+        }
+      }
+    },
+    "apiUpdateKafkaIntegrationRequest": {
+      "type": "object",
+      "properties": {
+        "integration": {
+          "$ref": "#/definitions/apiKafkaIntegration",
           "description": "Integration object."
         }
       }

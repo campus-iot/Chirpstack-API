@@ -166,6 +166,35 @@ service ApplicationService {
         };
     }
 
+    // CreateKafkaIntegration creates a Kafka application-integration.
+    rpc CreateKafkaIntegration(CreateKafkaIntegrationRequest) returns (google.protobuf.Empty) {
+        option(google.api.http) = {
+            post: "/api/applications/{integration.application_id}/integrations/kafka"
+            body: "*"
+        };
+    }
+
+    // GetKafkaIntegration returns the Kafkad application-integration.
+    rpc GetKafkaIntegration(GetKafkaIntegrationRequest) returns (GetKafkaIntegrationResponse) {
+        option(google.api.http) = {
+            get: "/api/applications/{application_id}/integrations/kafka"
+        };
+    }
+
+    // UpdateKafkaIntegration updates the Kafka application-integration.
+    rpc UpdateKafkaIntegration(UpdateKafkaIntegrationRequest) returns (google.protobuf.Empty) {
+        option(google.api.http) = {
+            put: "/api/applications/{integration.application_id}/integrations/kafka"
+            body: "*"
+        };
+    }
+
+    // DeleteKafkaIntegration deletes the Kafka application-integration.
+    rpc DeleteKafkaIntegration(DeleteKafkaIntegrationRequest) returns (google.protobuf.Empty) {
+        option(google.api.http) = {
+            delete: "/api/applications/{application_id}/integrations/kafka"
+        };
+    }
 
 	// ListIntegrations lists all configured integrations.
 	rpc ListIntegrations(ListIntegrationRequest) returns (ListIntegrationResponse) {
@@ -180,6 +209,7 @@ enum IntegrationKind {
 	INFLUXDB = 1;
     THINGSBOARD = 2;
     MYDEVICES = 3;
+    KAFKA = 4;
 }
 
 message Application {
@@ -491,6 +521,39 @@ message UpdateMyDevicesIntegrationRequest {
 }
 
 message DeleteMyDevicesIntegrationRequest {
+	// Application ID.
+	int64 application_id = 1 [json_name = "applicationID"];
+}
+
+message KafkaIntegration {
+	// Application ID.
+	int64 application_id = 1 [json_name = "applicationID"];
+
+    // Kafka server endpoint, e.g. https://example.com
+    string server = 2;
+}
+
+message CreateKafkaIntegrationRequest {
+    // Integration object to create.
+    KafkaIntegration integration = 1;
+}
+
+message GetKafkaIntegrationRequest {
+	// Application ID.
+	int64 application_id = 1 [json_name = "applicationID"];
+}
+
+message GetKafkaIntegrationResponse {
+    // Integration object.
+    KafkaIntegration integration = 1;
+}
+
+message UpdateKafkaIntegrationRequest {
+    // Integration object.
+    KafkaIntegration integration = 1;
+}
+
+message DeleteKafkaIntegrationRequest {
 	// Application ID.
 	int64 application_id = 1 [json_name = "applicationID"];
 }

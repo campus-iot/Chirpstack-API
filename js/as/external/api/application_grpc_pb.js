@@ -50,6 +50,17 @@ function deserialize_api_CreateInfluxDBIntegrationRequest(buffer_arg) {
   return as_external_api_application_pb.CreateInfluxDBIntegrationRequest.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_api_CreateKafkaIntegrationRequest(arg) {
+  if (!(arg instanceof as_external_api_application_pb.CreateKafkaIntegrationRequest)) {
+    throw new Error('Expected argument of type api.CreateKafkaIntegrationRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_api_CreateKafkaIntegrationRequest(buffer_arg) {
+  return as_external_api_application_pb.CreateKafkaIntegrationRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_api_CreateMyDevicesIntegrationRequest(arg) {
   if (!(arg instanceof as_external_api_application_pb.CreateMyDevicesIntegrationRequest)) {
     throw new Error('Expected argument of type api.CreateMyDevicesIntegrationRequest');
@@ -103,6 +114,17 @@ function serialize_api_DeleteInfluxDBIntegrationRequest(arg) {
 
 function deserialize_api_DeleteInfluxDBIntegrationRequest(buffer_arg) {
   return as_external_api_application_pb.DeleteInfluxDBIntegrationRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_api_DeleteKafkaIntegrationRequest(arg) {
+  if (!(arg instanceof as_external_api_application_pb.DeleteKafkaIntegrationRequest)) {
+    throw new Error('Expected argument of type api.DeleteKafkaIntegrationRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_api_DeleteKafkaIntegrationRequest(buffer_arg) {
+  return as_external_api_application_pb.DeleteKafkaIntegrationRequest.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_api_DeleteMyDevicesIntegrationRequest(arg) {
@@ -191,6 +213,28 @@ function serialize_api_GetInfluxDBIntegrationResponse(arg) {
 
 function deserialize_api_GetInfluxDBIntegrationResponse(buffer_arg) {
   return as_external_api_application_pb.GetInfluxDBIntegrationResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_api_GetKafkaIntegrationRequest(arg) {
+  if (!(arg instanceof as_external_api_application_pb.GetKafkaIntegrationRequest)) {
+    throw new Error('Expected argument of type api.GetKafkaIntegrationRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_api_GetKafkaIntegrationRequest(buffer_arg) {
+  return as_external_api_application_pb.GetKafkaIntegrationRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_api_GetKafkaIntegrationResponse(arg) {
+  if (!(arg instanceof as_external_api_application_pb.GetKafkaIntegrationResponse)) {
+    throw new Error('Expected argument of type api.GetKafkaIntegrationResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_api_GetKafkaIntegrationResponse(buffer_arg) {
+  return as_external_api_application_pb.GetKafkaIntegrationResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_api_GetMyDevicesIntegrationRequest(arg) {
@@ -312,6 +356,17 @@ function serialize_api_UpdateInfluxDBIntegrationRequest(arg) {
 
 function deserialize_api_UpdateInfluxDBIntegrationRequest(buffer_arg) {
   return as_external_api_application_pb.UpdateInfluxDBIntegrationRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_api_UpdateKafkaIntegrationRequest(arg) {
+  if (!(arg instanceof as_external_api_application_pb.UpdateKafkaIntegrationRequest)) {
+    throw new Error('Expected argument of type api.UpdateKafkaIntegrationRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_api_UpdateKafkaIntegrationRequest(buffer_arg) {
+  return as_external_api_application_pb.UpdateKafkaIntegrationRequest.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_api_UpdateMyDevicesIntegrationRequest(arg) {
@@ -599,6 +654,54 @@ var ApplicationServiceService = exports.ApplicationServiceService = {
     responseType: google_protobuf_empty_pb.Empty,
     requestSerialize: serialize_api_DeleteMyDevicesIntegrationRequest,
     requestDeserialize: deserialize_api_DeleteMyDevicesIntegrationRequest,
+    responseSerialize: serialize_google_protobuf_Empty,
+    responseDeserialize: deserialize_google_protobuf_Empty,
+  },
+  // CreateKafkaIntegration creates a Kafka application-integration.
+  createKafkaIntegration: {
+    path: '/api.ApplicationService/CreateKafkaIntegration',
+    requestStream: false,
+    responseStream: false,
+    requestType: as_external_api_application_pb.CreateKafkaIntegrationRequest,
+    responseType: google_protobuf_empty_pb.Empty,
+    requestSerialize: serialize_api_CreateKafkaIntegrationRequest,
+    requestDeserialize: deserialize_api_CreateKafkaIntegrationRequest,
+    responseSerialize: serialize_google_protobuf_Empty,
+    responseDeserialize: deserialize_google_protobuf_Empty,
+  },
+  // GetKafkaIntegration returns the Kafkad application-integration.
+  getKafkaIntegration: {
+    path: '/api.ApplicationService/GetKafkaIntegration',
+    requestStream: false,
+    responseStream: false,
+    requestType: as_external_api_application_pb.GetKafkaIntegrationRequest,
+    responseType: as_external_api_application_pb.GetKafkaIntegrationResponse,
+    requestSerialize: serialize_api_GetKafkaIntegrationRequest,
+    requestDeserialize: deserialize_api_GetKafkaIntegrationRequest,
+    responseSerialize: serialize_api_GetKafkaIntegrationResponse,
+    responseDeserialize: deserialize_api_GetKafkaIntegrationResponse,
+  },
+  // UpdateKafkaIntegration updates the Kafka application-integration.
+  updateKafkaIntegration: {
+    path: '/api.ApplicationService/UpdateKafkaIntegration',
+    requestStream: false,
+    responseStream: false,
+    requestType: as_external_api_application_pb.UpdateKafkaIntegrationRequest,
+    responseType: google_protobuf_empty_pb.Empty,
+    requestSerialize: serialize_api_UpdateKafkaIntegrationRequest,
+    requestDeserialize: deserialize_api_UpdateKafkaIntegrationRequest,
+    responseSerialize: serialize_google_protobuf_Empty,
+    responseDeserialize: deserialize_google_protobuf_Empty,
+  },
+  // DeleteKafkaIntegration deletes the Kafka application-integration.
+  deleteKafkaIntegration: {
+    path: '/api.ApplicationService/DeleteKafkaIntegration',
+    requestStream: false,
+    responseStream: false,
+    requestType: as_external_api_application_pb.DeleteKafkaIntegrationRequest,
+    responseType: google_protobuf_empty_pb.Empty,
+    requestSerialize: serialize_api_DeleteKafkaIntegrationRequest,
+    requestDeserialize: deserialize_api_DeleteKafkaIntegrationRequest,
     responseSerialize: serialize_google_protobuf_Empty,
     responseDeserialize: deserialize_google_protobuf_Empty,
   },

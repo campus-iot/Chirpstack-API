@@ -120,6 +120,26 @@ class ApplicationServiceStub(object):
         request_serializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.DeleteMyDevicesIntegrationRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
+    self.CreateKafkaIntegration = channel.unary_unary(
+        '/api.ApplicationService/CreateKafkaIntegration',
+        request_serializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.CreateKafkaIntegrationRequest.SerializeToString,
+        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
+    self.GetKafkaIntegration = channel.unary_unary(
+        '/api.ApplicationService/GetKafkaIntegration',
+        request_serializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.GetKafkaIntegrationRequest.SerializeToString,
+        response_deserializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.GetKafkaIntegrationResponse.FromString,
+        )
+    self.UpdateKafkaIntegration = channel.unary_unary(
+        '/api.ApplicationService/UpdateKafkaIntegration',
+        request_serializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.UpdateKafkaIntegrationRequest.SerializeToString,
+        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
+    self.DeleteKafkaIntegration = channel.unary_unary(
+        '/api.ApplicationService/DeleteKafkaIntegration',
+        request_serializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.DeleteKafkaIntegrationRequest.SerializeToString,
+        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
     self.ListIntegrations = channel.unary_unary(
         '/api.ApplicationService/ListIntegrations',
         request_serializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.ListIntegrationRequest.SerializeToString,
@@ -278,6 +298,34 @@ class ApplicationServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def CreateKafkaIntegration(self, request, context):
+    """CreateKafkaIntegration creates a Kafka application-integration.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetKafkaIntegration(self, request, context):
+    """GetKafkaIntegration returns the Kafkad application-integration.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def UpdateKafkaIntegration(self, request, context):
+    """UpdateKafkaIntegration updates the Kafka application-integration.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def DeleteKafkaIntegration(self, request, context):
+    """DeleteKafkaIntegration deletes the Kafka application-integration.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def ListIntegrations(self, request, context):
     """ListIntegrations lists all configured integrations.
     """
@@ -391,6 +439,26 @@ def add_ApplicationServiceServicer_to_server(servicer, server):
       'DeleteMyDevicesIntegration': grpc.unary_unary_rpc_method_handler(
           servicer.DeleteMyDevicesIntegration,
           request_deserializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.DeleteMyDevicesIntegrationRequest.FromString,
+          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+      ),
+      'CreateKafkaIntegration': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateKafkaIntegration,
+          request_deserializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.CreateKafkaIntegrationRequest.FromString,
+          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+      ),
+      'GetKafkaIntegration': grpc.unary_unary_rpc_method_handler(
+          servicer.GetKafkaIntegration,
+          request_deserializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.GetKafkaIntegrationRequest.FromString,
+          response_serializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.GetKafkaIntegrationResponse.SerializeToString,
+      ),
+      'UpdateKafkaIntegration': grpc.unary_unary_rpc_method_handler(
+          servicer.UpdateKafkaIntegration,
+          request_deserializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.UpdateKafkaIntegrationRequest.FromString,
+          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+      ),
+      'DeleteKafkaIntegration': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteKafkaIntegration,
+          request_deserializer=chirpstack__api_dot_as__pb_dot_external_dot_api_dot_application__pb2.DeleteKafkaIntegrationRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
       'ListIntegrations': grpc.unary_unary_rpc_method_handler(
