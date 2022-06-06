@@ -18,7 +18,7 @@ prost = "0.6"
 prost-types = "0.6.1"
 
 tonic = { version = "0.1", features = ["codegen"], default-features = false }
-tokio = { version = "0.2", features = ["macros"], optional = true }
+tokio = { version = "1.8", features = ["macros"], optional = true }
 
 [build-dependencies]
 tonic-build = { version = "0.1", default-features = false }
